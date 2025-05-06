@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- DB Connection -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/homeworkdb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">QaZWsXEdCRfV</property>
+
+
+        <!-- Hibernate Settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+
+
+        <!-- Entity Mapping -->
+        <mapping class="org.example.dto.Student"/>
+        <mapping class="org.example.dto.Homework"/>
+    </session-factory>
+</hibernate-configuration>
